@@ -28,7 +28,7 @@ export default {
             scoreTipsArr:['你说，是不是把知识都还给小学老师了？','还不错，但还需要继续加油哦！','不要嘚瑟还有进步的空间！','智商离爆表只差一步了！','你也太聪明啦，葡萄之家欢迎你！'],
         }
     },
-    computed: mapState(['answerid']),
+    computed: mapState(['answerid', 'allTime']),
 	created(){
         this.computedScore();
         this.getScoreTip();
@@ -47,10 +47,12 @@ export default {
         showCover: function (){
             this.showHide = !this.showHide;
         },
-        //根据分数显示提示
+        //根据分数、时间显示提示
         getScoreTip: function (){
           let index = Math.ceil(this.score/20)-1;
-          this.scoreTips = this.scoreTipsArr[index];
+          let scoreTips = this.scoreTipsArr[index];
+          let timeTips = " 您一共用时 " + this.allTime + " 秒";
+          this.scoreTips = scoreTips + timeTips;
         }
     },
 }

@@ -163,7 +163,7 @@ export default {
     }
 	.item_title{
 		font-size: 0.65rem;
-		color: #00e;
+		color: #FFFFFF;
 		line-height: 0.7rem;
 	}
 	.item_list{
@@ -173,7 +173,7 @@ export default {
 		span{
 			display: inline-block;
 			font-size: 0.6rem;
-			color: #00e;
+			color: #FFFFFF;
 			vertical-align: middle;
 		}
 		.option_style{

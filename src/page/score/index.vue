@@ -4,7 +4,10 @@
             <header class="your_scores"><span class="score_num">{{score}}</span><span class="fenshu">分！</span></header>
             <div class="result_tip">{{scoreTips}}</div>
         </div>
-        <div class="share_button" @click="showCover"></div>
+        <div class="button_container">
+            <span class="share_button" @click="showCover"></span>
+            <router-link to="/" class="restart_button"></router-link>
+        </div>
         <div class="share_code">
             <header class="share_header">关注葡萄之家，获取答案。</header>
             <img src="../../images/4-4.png" height="212" width="212" class="code_img"> 
@@ -98,12 +101,22 @@ export default {
             text-align: center;
         }
     }
-    .share_button{
-        width: 6.025rem;
-        height: 2.4rem;
-        margin: 0.8rem auto 0;
-        background: url(../../images/4-3.png) no-repeat 0.4rem 0;
-        background-size: 5.825rem 100%;
+    .button_container{
+        text-align: center;
+        .share_button{
+            width: 6.025rem;
+            height: 2.4rem;
+            background: url(../../images/4-3.png) no-repeat 0.4rem 0;
+            background-size: 5.825rem 100%;
+            display: inline-block;
+        }
+        .restart_button{
+            width: 6.025rem;
+            height: 2.1rem;
+            background: url(../../images/4-5.png) no-repeat 0.4rem 0;
+            background-size: 5.825rem 100%;
+            display: inline-block;
+        }
     }
     .share_code{
         width: 5.3rem;
